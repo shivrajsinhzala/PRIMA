@@ -21,7 +21,7 @@
     --brand-600: #645d4f;
     --brand-700: #504a3f;
     --iris-100: #5d5fef;
-    --natural-black : #151516;
+    --natural-black: #151516;
     --black: #000;
     --body-font: "Inconsolata", monospace;
     --heading-font: "BridgeText", sans-serif;
@@ -64,9 +64,14 @@ main {
 
 .col-left,
 .col-right {
+    width: 50%;
     flex: 1;
     max-width: 720px;
 }
+
+/* .col-right{
+    max-width: 600px;
+} */
 
 .img-preview {
     position: sticky;
@@ -1199,7 +1204,7 @@ label[for="1-pack"] .quantity-tag {
     transition: all 0.4s ease;
 }
 
-.hear-right .swiper-slide:not(.swiper-slide-active)::after{
+.hear-right .swiper-slide:not(.swiper-slide-active)::after {
     content: " ";
     display: block;
     width: 100%;
@@ -1278,12 +1283,12 @@ label[for="1-pack"] .quantity-tag {
     outline: none;
     z-index: 64635516165;
     position: absolute;
-    bottom:77px;
+    bottom: 77px;
     left: 20px;
     box-shadow: 0px 4px 16px 0px #0000001f;
 }
 
-.hear-right .swiper-slide-active .video-play-button{
+.hear-right .swiper-slide-active .video-play-button {
     bottom: 20px;
 }
 
@@ -1294,8 +1299,6 @@ label[for="1-pack"] .quantity-tag {
     fill: var(--neutral-eggshell);
     transition: all 0.2s ease;
 }
-
-
 
 .video-play-button.active {
     background-color: var(--black);
@@ -1484,7 +1487,6 @@ label[for="1-pack"] .quantity-tag {
     color: var(--black);
 }
 
-
 .faq-section {
     padding: 80px 0;
     background-color: var(--brand-100);
@@ -1526,8 +1528,7 @@ label[for="1-pack"] .quantity-tag {
     align-items: center;
 }
 
-
-.faq-section .faq-container .faq-item .faq-question p{
+.faq-section .faq-container .faq-item .faq-question p {
     font-size: 20px;
     font-weight: 300;
     line-height: 28px;
@@ -1546,16 +1547,15 @@ label[for="1-pack"] .quantity-tag {
     padding: 0 0; /* Start with no padding */
 }
 
-
 .faq-section .faq-container .faq-item .faq-answer.active {
     max-height: 300px; /* enough height to reveal content */
 }
 
-footer{
+footer {
     background-color: var(--natural-black);
 }
 
-footer .footer-container{
+footer .footer-container {
     margin: 0 auto;
     height: 64px;
     display: flex;
@@ -1565,8 +1565,7 @@ footer .footer-container{
     max-width: 1200px;
 }
 
-
-footer .copyright{
+footer .copyright {
     font-family: var(--bebas-font);
     font-weight: 400;
     color: var(--neutral-eggshell);
@@ -1575,12 +1574,12 @@ footer .copyright{
     letter-spacing: 1px;
 }
 
-footer .footer-links{
+footer .footer-links {
     display: flex;
     gap: 16px;
 }
 
-footer .footer-links a{
+footer .footer-links a {
     font-family: var(--bebas-font);
     font-weight: 400;
     color: var(--neutral-eggshell);
@@ -1590,10 +1589,90 @@ footer .footer-links a{
     text-decoration: none;
 }
 
-
 /* Mobile responsive adjustments
 @media (max-width: 600px) {
     .flavor-grid {
         grid-template-columns: 1fr;
     }
 } */
+
+@media screen and (max-width: 1440px) {
+    .frequency-label {
+        padding: 0 32px 0 32px;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1300px) {
+    .pack-price {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .col-right {
+        padding: 32px 60px 40px 20px;
+    }
+    .img-preview {
+        padding: 20px 8px 28px 40px;
+    }
+    .frequency-label {
+        padding: 0 32px 0 32px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .col-right {
+        padding: 32px 40px 40px 20px;
+    }
+    .img-preview {
+        padding: 20px 8px 28px 40px;
+    }
+    .quantity-label{
+        padding: 4px 15px;
+        gap: 8px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1080px) {
+    .col-right {
+        padding: 32px 20px 40px 20px;
+    }
+    .img-preview {
+        padding: 20px 8px 28px 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-left{
+        width: 100%;
+        padding: 0;
+    }
+
+    .col-right{
+        width: 80%;
+    }
+    .img-preview{
+        width: 100%;
+    }
+
+    .nutri-info-container{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nutri-info-container .left-panel{
+        width:80%;
+    }
+     .nutri-info-container .right-panel{
+        width: 80%;
+        align-items: center;
+    }
+
+}
