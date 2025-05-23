@@ -58,6 +58,7 @@ const imgSwiper = new Swiper(".img-container", {
         nextEl: ".next-view-btn",
         prevEl: ".previous-view-btn",
     },
+    grabCursor : true,
 });
 
 
@@ -154,3 +155,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+const onetimeRadio = document.getElementById("onetime");
+
+onetimeRadio.addEventListener("change", function () {
+    if (this.checked) {
+        document.querySelector(".select-menu").style.display = "none";
+        document.querySelector(".why-subscribe").style.display = "none";
+    }
+});
+
+const subscribeRadio = document.getElementById("subscribe");
+subscribeRadio.addEventListener("change", function () {
+    if (this.checked) {
+        document.querySelector(".select-menu").style.display = "block";
+        document.querySelector(".why-subscribe").style.display = "block";
+    }
+});
+
+
+
+const quantityPlus = document.querySelector(".plus-btn");
+const quantityMinus = document.querySelector(".minus-btn");
+const quantityInput = document.querySelector(".quantity");
+
+
+
+
+
+quantityPlus.addEventListener("click", () => {
+    let currentValue = parseInt(quantityInput.textContent) || 1;
+    quantityInput.textContent = currentValue + 1;
+});
+
+quantityMinus.addEventListener("click", () => {
+    let currentValue = parseInt(quantityInput.textContent) || 0;
+    quantityInput.textContent = Math.max(1, currentValue - 1);
+});
+
+
+
