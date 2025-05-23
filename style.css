@@ -1413,7 +1413,7 @@ label[for="1-pack"] .quantity-tag {
 }
 
 .comparison-grid-item.row5 {
-    border: none;
+    border-bottom: none;
 }
 
 .testimonials-section {
