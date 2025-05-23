@@ -29,21 +29,27 @@ const nutriBtnMocha = document.querySelector(".nutri-btn-mocha");
 const nutriBtnCaramel = document.querySelector(".nutri-btn-caramel");
 
 nutriBtnCocoa.addEventListener("click", () => {
-    document.querySelector(".swiper-cocoa").style.display = "block";
-    document.querySelector(".swiper-mocha").style.display = "none";
-    document.querySelector(".swiper-caramel").style.display = "none";
+    document.querySelector(".nutri-img-1").src =
+        "./assets/images/cocoa-nutri (4).png";
+    document.querySelector(".nutri-img-2").src = "./assets/images/cocoa-nutri (3).png";
+    document.querySelector(".nutri-img-3").src = "./assets/images/cocoa-nutri (2).png";
+    document.querySelector(".nutri-img-4").src = "./assets/images/cocoa-nutri (1).png";
 });
 
 nutriBtnMocha.addEventListener("click", () => {
-    document.querySelector(".swiper-cocoa").style.display = "none";
-    document.querySelector(".swiper-mocha").style.display = "block";
-    document.querySelector(".swiper-caramel").style.display = "none";
+    document.querySelector(".nutri-img-1").src =
+        "./assets/images/mocha-nutri (4).png";
+    document.querySelector(".nutri-img-2").src = "./assets/images/mocha-nutri (3).png";
+    document.querySelector(".nutri-img-3").src = "./assets/images/mocha-nutri (2).png";
+    document.querySelector(".nutri-img-4").src = "./assets/images/mocha-nutri (1).png";
 });
 
 nutriBtnCaramel.addEventListener("click", () => {
-    document.querySelector(".swiper-cocoa").style.display = "none";
-    document.querySelector(".swiper-mocha").style.display = "none";
-    document.querySelector(".swiper-caramel").style.display = "block";
+    document.querySelector(".nutri-img-1").src =
+        "./assets/images/caramel-nutri (4).png";
+    document.querySelector(".nutri-img-2").src = "./assets/images/caramel-nutri (3).png";
+    document.querySelector(".nutri-img-3").src = "./assets/images/caramel-nutri (2).png";
+    document.querySelector(".nutri-img-4").src = "./assets/images/caramel-nutri (1).png";
 });
 
 const imgSwiper = new Swiper(".img-container", {
@@ -78,7 +84,6 @@ const imgSwiper = new Swiper(".img-container", {
 
 const swiper = new Swiper(".videoSwiper", {
     slidesPerView: "auto",
-    spaceBetween: 16,
     centeredSlides: false,
     grabCursor: true,
     navigation: {
