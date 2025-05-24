@@ -104,6 +104,30 @@ const swiper = new Swiper(".videoSwiper", {
     // },
 });
 
+const testimonialSwiper = new Swiper('.testimonials-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+}
+)
+
+
+const imgPreviewSlider = new Swiper('.img-preview-slider', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.img-swiper-pagination',
+        clickable: true,
+    },
+    grabCursor: true,
+});
+
+
+
+
 document.querySelectorAll(".video-play-button").forEach((btn) => {
     btn.addEventListener("click", () => {
         if (!btn.classList.contains("active")) {

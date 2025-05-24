@@ -85,6 +85,17 @@ main {
     padding: 40px 16px 56px 80px;
 }
 
+.img-preview-slider {
+    display: none !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-left: auto;
+    background-color: var(--brand-100);
+    padding: 40px 16px 56px 80px;
+}
+
 .sub-img img {
     width: 100%;
     height: auto;
@@ -847,7 +858,7 @@ label[for="1-pack"] .quantity-tag {
 .text-block .text-content p {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 .nutri-buttons {
@@ -912,6 +923,9 @@ label[for="1-pack"] .quantity-tag {
 .view-btn .swiper-button-disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+.read-more-reviews-mobile {
+    display: none;
 }
 /* .hear-from {
     padding: 80px 0 80px 120px;
@@ -1470,6 +1484,7 @@ label[for="1-pack"] .quantity-tag {
     line-height: 20px;
     letter-spacing: 0%;
     text-align: center;
+    padding: 0 8px;
     vertical-align: middle;
 }
 
@@ -1562,7 +1577,16 @@ label[for="1-pack"] .quantity-tag {
     margin: 0 auto;
 }
 
-.testimonials-container .testimonial {
+.testimonials-slider {
+    display: none !important;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-container .testimonial,
+.testimonials-slider .testimonial {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -1571,30 +1595,41 @@ label[for="1-pack"] .quantity-tag {
     border: var(--brand-500) 1px solid;
 }
 
-.testimonials-container .testimonial .testimonial-text {
+.testimonials-slider .testimonial {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 384px;
+}
+
+.testimonials-container .testimonial .testimonial-text,
+.testimonials-slider .testimonial .testimonial-text {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.testimonials-container .testimonial .testimonial-text p {
+.testimonials-container .testimonial .testimonial-text p,
+.testimonials-slider .testimonial .testimonial-text p {
     font-size: 16px;
     line-height: 20px;
     color: var(--black);
 }
-.testimonials-container .testimonial .testimonial-stars {
+.testimonials-container .testimonial .testimonial-stars,
+.testimonials-slider .testimonial .testimonial-stars {
     display: flex;
     align-items: center;
 }
 
-.testimonials-container .testimonial .testimonial-text h6 {
+.testimonials-container .testimonial .testimonial-text h6,
+.testimonials-slider .testimonial .testimonial-text h6 {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
     color: var(--black);
 }
 
-.testimonials-container .testimonial .testimonial-name p {
+.testimonials-container .testimonial .testimonial-name p,
+.testimonials-slider .testimonial .testimonial-name p {
     font-size: 18px;
     letter-spacing: 1px;
     font-family: var(--bebas-font);
@@ -1732,10 +1767,38 @@ footer .footer-links a {
     .frequency-label {
         padding: 0 32px 0 32px;
     }
-    .testimonials-container {
-        padding-left: 40px;
-        padding-right: 40px;
+    .testimonials-section {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
     }
+    .testimonials-container {
+        display: none;
+    }
+
+    .testi-slider-container {
+        padding: 0 0 0 40px;
+        width: 100%;
+    }
+
+    .testimonials-slider {
+        display: flex !important;
+        width: 100%;
+        padding: 0 0 40px 0 !important;
+        max-width: 100%;
+    }
+
+    .testimonial-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: var(--brand-200);
+        margin: 0 3px;
+        opacity: 1;
+    }
+    .testimonial-pagination .swiper-pagination-bullet-active {
+        background-color: var(--brand-500);
+    }
+
     .nutrition-facts {
         padding-left: 40px;
         padding-right: 40px;
@@ -1861,12 +1924,63 @@ footer .footer-links a {
         width: 80%;
     }
 
-    .testimonials-container{
+    .testimonials-container {
         padding: 0;
         width: 80%;
     }
-
-    
 }
 
+@media screen and (max-width: 850px) {
+    .usp {
+        width: calc(33.33% - 40px);
+    }
+    .unique-selling-points .container {
+        gap: 40px;
+    }
+    .unique-selling-points {
+        padding: 32px;
+    }
+    .hear-left .read-more-reviews {
+        display: none;
+    }
+    .read-more-reviews-mobile {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 13px 48px;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--neutral-eggshell);
+        background-color: var(--brand-600);
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .img-preview-slider {
+        display: flex !important;
+        padding: 0 16px 16px 16px !important;
+    }
+    .img-preview-slider .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .img-preview-slider .swiper-slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-preview-slider .swiper-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .img-preview {
+        display: none;
+    }
+}
