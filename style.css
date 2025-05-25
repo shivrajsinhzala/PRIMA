@@ -210,9 +210,9 @@ main {
     padding-right: 12px;
 }
 
-.product-features span {
+/* .product-features span {
     font-weight: 700;
-}
+} */
 
 .flavour-select {
     margin-top: 24px;
@@ -231,7 +231,7 @@ label {
 }
 
 .flavor-options div {
-    width: 49%;
+    width: calc(50% - 4px);
 }
 
 .flavor-input {
@@ -1181,6 +1181,28 @@ label[for="1-pack"] .quantity-tag {
     color: var(--black);
 }
 
+.single-review .single-review-user {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.single-review .single-review-user .single-review-username {
+    font-family: var(--bebas-font);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.single-review .single-review-user .single-review-user-verified {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
 .hear-left .read-more-reviews {
     display: flex;
     align-items: center;
@@ -1904,7 +1926,7 @@ footer .footer-links a {
     }
 
     .flavor-options div {
-        width: 49.3%;
+        width: calc(50% - 4px);
     }
 }
 
@@ -1982,5 +2004,257 @@ footer .footer-links a {
 
     .img-preview {
         display: none;
+    }
+
+    .faq-section {
+        padding: 40px 35px;
+        gap: 24px;
+    }
+    .faq-section h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 300;
+        text-align: center;
+        color: var(--natural-black);
+        font-family: var(--heading-font);
+    }
+
+    .faq-section .faq-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    footer {
+        padding: 16px 22px;
+    }
+    footer .footer-container {
+        width: 100%;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .img-preview-slider {
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        background-color: transparent;
+    }
+
+    .img-preview-slider .img-swiper-pagination {
+        width: fit-content !important;
+        margin: 0 auto;
+    }
+
+    .img-preview-slider .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: var(--brand-200);
+        margin: 0 3px;
+        opacity: 1;
+    }
+    .img-preview-slider .swiper-pagination-bullet-active {
+        background-color: var(--brand-500);
+    }
+    .img-preview-slider {
+        overflow: hidden;
+    }
+
+    .col-right {
+        width: 100%;
+        padding: 8px 16px;
+        max-width: 100%;
+        padding-bottom: 24px;
+    }
+    .product-title {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-weight: 300;
+        font-size: 30px;
+        vertical-align: middle;
+    }
+
+    .old-price {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .price {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .product-price {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .quantity-label {
+        padding: 10px 16px;
+    }
+
+    .pack-price .price-container .old-price,
+    .pack-price .price-container .price {
+        font-size: 12px;
+    }
+
+    .pack-price {
+        width: 128px;
+    }
+
+    .frequency-options {
+        flex-wrap: wrap;
+    }
+
+    .also-available {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 24px;
+    }
+
+    .also-available h5 {
+        width: 100%;
+    }
+
+    .nutrition-facts {
+        padding: 40px 16px;
+    }
+
+    .nutrition-facts h3 {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .nutri-info-container {
+        margin-top: 24px;
+    }
+
+    .nutri-info-container .left-panel {
+        width: 100%;
+    }
+
+    .nutri-buttons-container {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nutri-info-container .nutri-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nutri-info-container .right-panel {
+        width: 100%;
+        padding: 40px 16px 0 16px;
+        gap: 24px;
+    }
+
+    .text-block .text-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .text-block .text-content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .text-block {
+        gap: 8px;
+    }
+
+    .hear-from {
+        padding: 40px 16px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hear-from .hear-left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hear-from .hear-left h3 {
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+
+    .single-review {
+        margin-bottom: 16px;
+    }
+
+    .hear-from {
+        gap: 24px;
+    }
+
+    .hear-from .hear-right {
+        width: 100%;
+    }
+
+    .comparison-grid {
+        padding: 40px 24px;
+    }
+
+    .comparison-grid h3 {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .testimonials-section {
+        padding: 40px 16px;
+        gap: 24px;
+        padding-right: 0;
+    }
+
+    .testimonials-section h3 {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .testi-slider-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .unique-selling-points .usp {
+        width: calc(50% - 20px);
+    }
+
+    .faq-question{
+        gap: 48px;
+    }
+
+    .pack-img{
+        margin-left: 8px;
+    }
+    .pack-img img{
+        max-width: 80px;
+    }
+
+    .selection-indicator{
+        right: 16px;
+    }
+
+    .pack-price{
+        margin-right: 35px;
+    }
+
+    .nutri-info-container .right-panel{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .testimonials-slider .testimonial{
+        max-width: 288px;
+    }
+
+    footer .footer-links a{
+        letter-spacing: 0;
     }
 }

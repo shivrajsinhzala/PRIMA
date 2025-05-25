@@ -104,20 +104,30 @@ const swiper = new Swiper(".videoSwiper", {
     // },
 });
 
-const testimonialSwiper = new Swiper('.testimonials-slider', {
-    slidesPerView: 'auto',
+const testimonialSwiper = new Swiper(".testimonials-slider", {
+    slidesPerView: "auto",
     spaceBetween: 24,
     grabCursor: true,
     pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
         clickable: true,
     },
-}
-)
+    breakpoints: {
+        0: {
+            spaceBetween: 8,
+        },
+        768: {
+            spaceBetween: 24,
+        },
+    }
+});
+
 
 
 const imgPreviewSlider = new Swiper('.img-preview-slider', {
     slidesPerView: 1,
+    spaceBetween: 16,
+
     pagination: {
         el: '.img-swiper-pagination',
         clickable: true,
