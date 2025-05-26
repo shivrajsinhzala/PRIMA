@@ -16,6 +16,8 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+
     </head>
     <body>
         <header>
@@ -25,13 +27,14 @@
             <div class="col-left">
                 <div class="img-preview">
                     <div class="sub-img">
-                        <img src="./assets/images/sub-img-3.png" alt="" />
-                        <img src="./assets/images/sub-img-1.png" alt="" />
-                        <img src="./assets/images/sub-img-4.png" alt="" />
-                        <img src="./assets/images/sub-img-2.png" alt="" />
+                            <img src="./assets/images/cacao-main-img.png" alt="" />
+                        <img src="./assets/images/cacao-sub-img-3.png" alt="" />
+                        <img src="./assets/images/cacao-sub-img-1.png" alt="" />
+                        <img src="./assets/images/cacao-sub-img-4.png" alt="" />
+                        <img src="./assets/images/cacao-sub-img-2.png" alt="" />
                     </div>
-                    <div class="main-img">
-                        <img src="./assets/images/main-img.png" alt="" />
+                    <div class="main-img" >
+                        <img src="./assets/images/cacao-main-img.png" alt=""  id="main-img"/>
                     </div>
                 </div>
 
@@ -39,23 +42,23 @@
                     <div class="main-img swiper-wrapper">
 
                         <div class="swiper-slide">
-                            <img src="./assets/images/main-img.png" alt="" />
+                            <img src="./assets/images/cacao-main-img.png" alt="" />
                         </div>
                         <div class="swiper-slide">
 
-                            <img src="./assets/images/sub-img-3.png" alt="" />
+                            <img src="./assets/images/cacao-sub-img-3.png" alt="" />
                         </div>
                         <div class="swiper-slide">
 
-                            <img src="./assets/images/sub-img-1.png" alt="" />
+                            <img src="./assets/images/cacao-sub-img-1.png" alt="" />
                         </div>
                         <div class="swiper-slide">
 
-                            <img src="./assets/images/sub-img-4.png" alt="" />
+                            <img src="./assets/images/cacao-sub-img-4.png" alt="" />
                         </div>
                         <div class="swiper-slide">
 
-                            <img src="./assets/images/sub-img-2.png" alt="" />
+                            <img src="./assets/images/cacao-sub-img-2.png" alt="" />
                         </div>
                     </div>
                     <div class="img-swiper-pagination"></div>
@@ -251,6 +254,7 @@
                                 type="radio"
                                 name="quantity"
                                 id="8-pack"
+                                value="8"
                                 class="quantity-input"
                                 checked
                             />
@@ -262,8 +266,9 @@
                                 </div>
                                 <div class="pack-img">
                                     <img
-                                        src="./assets/images/8-pack.png"
+                                        src="./assets/images/cacao-8-pack.png"
                                         alt=""
+                                        class="pack-img-8"
                                     />
                                 </div>
                                 <div class="pack-price">
@@ -282,6 +287,7 @@
                                 type="radio"
                                 name="quantity"
                                 id="4-pack"
+                                value="4"
                                 class="quantity-input"
                             />
                             <label for="4-pack" class="quantity-label">
@@ -292,8 +298,9 @@
                                 </div>
                                 <div class="pack-img">
                                     <img
-                                        src="./assets/images/4-pack.png"
+                                        src="./assets/images/cacao-4-pack.png"
                                         alt=""
+                                        class="pack-img-4"
                                     />
                                 </div>
                                 <div class="pack-price">
@@ -312,6 +319,7 @@
                                 type="radio"
                                 name="quantity"
                                 id="2-pack"
+                                value="2"
                                 class="quantity-input"
                             />
                             <label for="2-pack" class="quantity-label">
@@ -322,8 +330,9 @@
                                 </div>
                                 <div class="pack-img">
                                     <img
-                                        src="./assets/images/2-pack.png"
+                                        src="./assets/images/cacao-2-pack.png"
                                         alt=""
+                                        class="pack-img-2"
                                     />
                                 </div>
                                 <div class="pack-price">
@@ -342,6 +351,7 @@
                                 type="radio"
                                 name="quantity"
                                 id="1-pack"
+                                value="1"
                                 class="quantity-input"
                             />
                             <label for="1-pack" class="quantity-label">
@@ -352,8 +362,9 @@
                                 </div>
                                 <div class="pack-img">
                                     <img
-                                        src="./assets/images/1-pack.png"
+                                        src="./assets/images/cacao-1-pack.png"
                                         alt=""
+                                        class="pack-img-1"
                                     />
                                 </div>
                                 <div class="pack-price">
@@ -379,6 +390,7 @@
                                 name="frequency"
                                 id="subscribe"
                                 class="frequency-input"
+                                value="subscribed"
                                 checked
                             />
                             <label for="subscribe" class="frequency-label">
@@ -393,6 +405,7 @@
                                 type="radio"
                                 name="frequency"
                                 id="onetime"
+                                value="onetime"
                                 class="frequency-input"
                             />
                             <label for="onetime" class="frequency-label">
@@ -714,32 +727,32 @@
                                 </svg>
                             </div>
                         </div> -->
-                        <div class="img-container swiper swiper-cocoa">
+                        <div class="img-container swiper swiper-cacao">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img
-                                        src="./assets/images/cocoa-nutri (4).png"
+                                        src="./assets/images/cacao-nutri (4).png"
                                         alt=""
                                         class="nutrition-facts-img nutri-img-1"
                                     />
                                 </div>
                                 <div class="swiper-slide">
                                     <img
-                                        src="./assets/images/cocoa-nutri (3).png"
+                                        src="./assets/images/cacao-nutri (3).png"
                                         alt=""
                                         class="nutrition-facts-img nutri-img-2"
                                     />
                                 </div>
                                 <div class="swiper-slide">
                                     <img
-                                        src="./assets/images/cocoa-nutri (2).png"
+                                        src="./assets/images/cacao-nutri (2).png"
                                         alt=""
                                         class="nutrition-facts-img nutri-img-3"
                                     />
                                 </div>
                                 <div class="swiper-slide">
                                     <img
-                                        src="./assets/images/cocoa-nutri (1).png"
+                                        src="./assets/images/cacao-nutri (1).png"
                                         alt=""
                                         class="nutrition-facts-img nutri-img-4"
                                     />
@@ -794,7 +807,7 @@
                         <div class="nutri-buttons-container">
                             view labels for:
                             <div class="nutri-buttons">
-                                <div class="nutri-btn nutri-btn-cocoa active">
+                                <div class="nutri-btn nutri-btn-cacao active">
                                     CACAO
                                 </div>
                                 <div class="nutri-btn nutri-btn-mocha">
