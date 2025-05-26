@@ -1390,6 +1390,17 @@ label[for="1-pack"] .quantity-tag {
     font-family: var(--heading-font);
 }
 
+.comparison-grid h3 span {
+    width: 100%;
+    display: inline-block;    
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    color: var(--black);
+    font-family: var(--heading-font);
+}
+
 .comparison-grid-container {
     max-width: 960px;
     width: 100%;
@@ -2201,8 +2212,10 @@ footer .footer-links a {
         font-size: 30px;
         line-height: 36px;
         font-weight: 300;
-        text-align: center;
+        text-align: left;
+        width: 340px;
     }
+    
     .testimonials-section {
         padding: 40px 16px;
         gap: 24px;
@@ -2256,5 +2269,24 @@ footer .footer-links a {
 
     footer .footer-links a{
         letter-spacing: 0;
+    }
+
+    .flavor-label{
+        padding: 6px 8px;
+        gap: 8px;
+    }
+
+    .shop-pay-line p{
+        gap:  2px 8px;
+    }
+}
+
+
+@media screen and (max-width: 389px) {
+    .quantity-label{
+        padding : 8px 6px;
+    }   
+    .selection-indicator{
+        right: 8px;
     }
 }
