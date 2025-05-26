@@ -42,7 +42,6 @@ html {
     box-sizing: border-box;
     font-family: var(--body-font);
     user-select: none;
-    color: var(--black);
     --webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;
     --webkit-user-select: none;
