@@ -86,7 +86,7 @@ const imgSwiper = new Swiper(".img-container", {
 const swiper = new Swiper(".videoSwiper", {
     slidesPerView: "auto",
     centeredSlides: false,
-    // loop: true,
+    loop: true,
     grabCursor: true,
     navigation: {
         nextEl: ".swiper-video-next",
